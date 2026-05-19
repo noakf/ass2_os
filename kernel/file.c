@@ -87,6 +87,7 @@ fileclose(struct file *f)
 int
 filestat(struct file *f, uint64 addr)
 {
+  
   struct proc *p = myproc();
   struct stat st;
   

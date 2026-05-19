@@ -107,3 +107,72 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+uint64
+sys_lcg_srand(void)
+{
+  int seed;
+
+  argint(0, &seed);
+  lcg_srand((uint)seed);
+  return 0;
+}
+
+uint64
+sys_lcg_rand(void)
+{
+  return lcg_rand();
+}
+
+uint64
+sys_setgid(void)
+{
+  int gid;
+
+  argint(0, &gid);
+  myproc()->gid = gid;
+
+  return 0;
+}
+
+uint64
+sys_getgid(void)
+{
+  return myproc()->gid;
+}
+
+uint64
+sys_israeli_create(void)
+{
+  int favoritism;
+
+  argint(0, &favoritism);
+  return israeli_create(favoritism);
+}
+
+uint64
+sys_israeli_acquire(void)
+{
+  int lock_id;
+
+  argint(0, &lock_id);
+  return israeli_acquire(lock_id);
+}
+
+uint64
+sys_israeli_release(void)
+{
+  int lock_id;
+
+  argint(0, &lock_id);
+  return israeli_release(lock_id);
+}
+
+uint64
+sys_israeli_destroy(void)
+{
+  int lock_id;
+
+  argint(0, &lock_id);
+  return israeli_destroy(lock_id);
+}

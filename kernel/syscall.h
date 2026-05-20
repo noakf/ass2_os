@@ -28,3 +28,8 @@
 #define SYS_israeli_acquire 27
 #define SYS_israeli_release 28
 #define SYS_israeli_destroy 29
+#define SYS_race_init          30
+#define SYS_race_inc_score     31
+#define SYS_race_get_score     32
+#define SYS_race_is_finished   33
+#define SYS_race_winner        34

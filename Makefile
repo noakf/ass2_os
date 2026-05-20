@@ -31,6 +31,7 @@ OBJS = \
   $K/virtio_disk.o \
   $K/lcg.o \
   $K/israeli_lock.o \
+  $K/race.o \
 
 # riscv64-unknown-elf- or riscv64-linux-gnu-
 # perhaps in /opt/riscv/bin
@@ -149,6 +150,7 @@ UPROGS=\
 	$U/_dorphan\
 	$U/_gidtest\
 	$U/_ilocktest\
+    $U/_relay_race\
 
 
 fs.img: mkfs/mkfs README $(UPROGS)

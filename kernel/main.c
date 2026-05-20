@@ -31,6 +31,7 @@ main()
     userinit();      // first user process
     lcginit();        // lcg seed init
     israeliinit(); 
+    raceinit();
     __sync_synchronize();
     started = 1;
   } else {

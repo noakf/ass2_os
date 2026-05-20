@@ -33,6 +33,12 @@ int israeli_acquire(int);
 int israeli_release(int);
 int israeli_destroy(int);
 
+int race_init(int teams, int target);
+int race_inc_score(int team);
+int race_get_score(int team);
+int race_is_finished(void);
+int race_winner(void);
+
 // ulib.c
 int stat(const char*, struct stat*);
 char* strcpy(char*, const char*);

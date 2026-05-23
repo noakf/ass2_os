@@ -170,7 +170,7 @@ israeli_release(int lock_id)
     return 0;
   }
 
-  int chosen_index = choose_next(l, releasing_gid);
+  int chosen_index = choose_next(l, releasing_gid); 
   struct proc *next = l->queue[chosen_index];
 
   remove_from_queue(l, chosen_index);
